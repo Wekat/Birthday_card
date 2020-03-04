@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/aditya-chinchure-ZhQCZjr9fHo-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    transition-property: transform;
+    font-family: 'Permanent Marker', cursive;
+    transition: all 2s ease-in-out;
+}
+
+.heading:hover {
+    transform: scale(3);
+    color: aquamarine;
+    cursor: none;
+}

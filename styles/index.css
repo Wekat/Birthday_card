@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 .main {
@@ -11,16 +12,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .heading {
     transition-property: transform;
     font-family: 'Permanent Marker', cursive;
     transition: all 2s ease-in-out;
+    color: rgb(253, 231, 108);
+    z-index: 20;
 }
 
 .heading:hover {
     transform: scale(3);
     color: aquamarine;
     cursor: none;
+}
+
+.balloon {
+    max-width: 170px;
+    position: absolute;
+    z-index: 2;
+    animation-name: balloon;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes balloon {
+    0% {bottom: -180px; left: 90%}
+    60% {bottom: 60%; left: 40%}
+    100% {bottom: 120%; left: -20%}
+}
+
+.people {
+    max-height: 200px;
+    position: absolute;
+    bottom: -40px;
+    left: -20px;
 }
